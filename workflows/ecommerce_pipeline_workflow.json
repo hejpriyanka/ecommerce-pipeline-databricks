@@ -1,0 +1,40 @@
+{
+  "name": "ecommerce_pipeline_workflow",
+  "tasks": [
+    {
+      "task_key": "Bronze_Layer_Task",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Notebooks_ecommerce/bronze_ecommerce"
+      },
+      "new_cluster": {
+        "spark_version": "12.2.x-scala2.12",
+        "node_type_id": "Standard_DS3_v2",
+        "num_workers": 1
+      }
+    },
+    {
+      "task_key": "Silver_Layer_Task",
+      "depends_on": [
+        {
+          "task_key": "Bronze_Layer_Task"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Notebooks_ecommerce/silver_ecommerce"
+      },
+      "existing_cluster_id": "<your-cluster-id>"
+    },
+    {
+      "task_key": "Gold_Layer_Task",
+      "depends_on": [
+        {
+          "task_key": "Silver_Layer_Task"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Notebooks_ecommerce/gold_ecommerce"
+      },
+      "existing_cluster_id": "<your-cluster-id>"
+    }
+  ]
+}
