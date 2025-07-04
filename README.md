@@ -31,19 +31,4 @@ The pipeline is modular, scalable, and production-ready. It demonstrates how to:
 - Enable downstream use cases such as BI dashboards, reporting, and machine learning
 
 ## 🗂️ Project Structure
-ecommerce-pipeline-databricks/
-|
-├── notebooks/
-│   ├── 01_ingest_raw_data.py                     # Ingests manually uploaded raw data into the Bronze layer
-│   ├── 02_transform_bronze_to_silver.py          # Cleans and transforms Bronze data into Silver
-│   └── 03_transform_silver_to_gold_and_report.py # Aggregates Silver data into Gold and generates reports
-|
-├── workflows/
-│   └── ecommerce_pipeline_workflow.json          # Reference JSON for Databricks Workflow (not executable)
-|
-├── data/
-│   ├── bronze/                                   # Ingested raw data stored as Delta tables
-│   ├── silver/                                   # Cleaned and joined data
-│   └── gold/                                     # Aggregated and analytics-ready data
-|
-└── README.md                                     # Project documentation
+ecommerce-pipeline-databricks/ | ├── notebooks/ │ ├── 01_ingest_raw_data.py # Ingests manually uploaded raw data into the Bronze layer │ ├── 02_transform_bronze_to_silver.py # Cleans and transforms Bronze data into Silver │ └── 03_transform_silver_to_gold_and_report.py # Aggregates Silver data into Gold and generates reports | ├── workflows/ │ └── ecommerce_pipeline_workflow.json # Reference JSON for Databricks Workflow (not executable) | ├── data/ │ ├── raw/ # Raw input data (CSV files manually uploaded to DBFS) │ ├── bronze/ # Ingested raw data stored as Delta tables │ ├── silver/ # Cleaned and joined data │ └── gold/ # Aggregated and analytics-ready data | ├── utils/ │ └── helpers.py # Utility functions for data processing | └── README.md # Project documentation
