@@ -26,7 +26,12 @@
       "notebook_task": {
         "notebook_path": "/Workspace/Notebooks_ecommerce/gold_ecommerce"
       },
+<<<<<<< Updated upstream
       "existing_cluster_id": "<your-cluster-id>"  // Replace <your-cluster-id> with your actual Databricks cluster ID before running the workflow
+=======
+      "existing_cluster_id": "<your-cluster-id>"
+      
+>>>>>>> Stashed changes
     }
   ]
 }
