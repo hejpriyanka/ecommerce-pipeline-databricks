@@ -14,27 +14,19 @@
     },
     {
       "task_key": "Silver_Layer_Task",
-      "depends_on": [
-        {
-          "task_key": "Bronze_Layer_Task"
-        }
-      ],
+      "depends_on": [{ "task_key": "Bronze_Layer_Task" }],
       "notebook_task": {
         "notebook_path": "/Workspace/Notebooks_ecommerce/silver_ecommerce"
       },
-      "existing_cluster_id": "<your-cluster-id>"
+      "existing_cluster_id": "<your-cluster-id>"  // Replace <your-cluster-id> with your actual Databricks cluster ID before running the workflow
     },
     {
       "task_key": "Gold_Layer_Task",
-      "depends_on": [
-        {
-          "task_key": "Silver_Layer_Task"
-        }
-      ],
+      "depends_on": [{ "task_key": "Silver_Layer_Task" }],
       "notebook_task": {
         "notebook_path": "/Workspace/Notebooks_ecommerce/gold_ecommerce"
       },
-      "existing_cluster_id": "<your-cluster-id>"
+      "existing_cluster_id": "<your-cluster-id>"  // Replace <your-cluster-id> with your actual Databricks cluster ID before running the workflow
     }
   ]
 }
