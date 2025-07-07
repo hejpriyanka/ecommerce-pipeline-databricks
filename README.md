@@ -33,16 +33,16 @@ The pipeline is modular, scalable, and production-ready. It demonstrates how to:
 ## 🗂️ Project Structure
 ecommerce-pipeline-databricks/
 ├── notebooks/
-│   ├── 01_ingest_raw_data.py                  # Ingests manually uploaded raw data into the Bronze layer
-│   ├── 02_transform_bronze_to_silver.py       # Cleans and transforms Bronze data into Silver
-│   ├── 03_transform_silver_to_gold_and_report.py # Aggregates Silver data into Gold and generates reports
+│   ├── 01_ingest_raw_data.py                     # Ingests manually uploaded raw data into the Bronze layer
+│   ├── 02_transform_bronze_to_silver.py          # Cleans and transforms Bronze data into Silver
+│   └── 03_transform_silver_to_gold_and_report.py # Aggregates Silver data into Gold and generates reports
 │
 ├── workflows/
-│   └── ecommerce_pipeline_workflow.json       # Reference JSON for Databricks Workflow (not executable)
+│   └── ecommerce_pipeline_workflow.json          # Reference JSON for Databricks Workflow (not executable)
 │
 ├── data/
-│   ├── bronze/                                # Raw ingested data stored as CSV files
-│   ├── silver/                                # Cleaned and joined data
-│   └── gold/                                  # Aggregated and analytics-ready data
+│   ├── bronze/                                   # Raw ingested data stored as CSV files
+│   ├── silver/                                   # Cleaned and joined data
+│   └── gold/                                     # Aggregated and analytics-ready data
 │
-└── README.md                                  # Project documentation
+└── README.md                                     # Project documentation
