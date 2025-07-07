@@ -13,6 +13,10 @@ This project demonstrates a complete data engineering pipeline for an eCommerce 
 - Schedule and orchestrate workflows using Databricks Workflows
 - Enable downstream analytics and reporting
 
+ ## Databricks Data Pipeline Architecture
+
+![Databricks Data Pipeline Architecture](images/databricks-data-pipeline-architecture.png)
+
 ## 📄 Project Description
 
 This project simulates a real-world eCommerce data engineering pipeline built on Databricks, leveraging Apache Spark, Delta Lake, and Databricks Workflows to manage and orchestrate data processing tasks.
